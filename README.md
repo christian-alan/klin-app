@@ -2,9 +2,11 @@
 
 A daily interaction project: the interface of a guitar amp and effects plugin, built as a web app. UI only, no audio.
 
-[![Watch the Kiln interaction video](docs/video-poster.png)](docs/kiln-interaction.mp4)
+<p align="center">
+  <img src="docs/demo.webp" alt="Demo: amp knobs turn and the amp switches between Flint, Cinder and Ember, pedals toggle, cabinet mics move, EQ and rack effects adjust, the tuner and a 7/8 metronome run, and a preset is saved" width="800">
+</p>
 
-▶ [Watch the interaction video](docs/kiln-interaction.mp4)
+<p align="center"><a href="docs/demo.mp4">Watch as a video</a></p>
 
 ## Features
 

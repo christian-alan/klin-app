@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@theme {
+  --color-shell: #d3d7ee;
+  --color-shell-deep: #c6cae4;
+  --color-bar: #b9bedd;
+  --color-ink: #262838;
+  --color-ink-soft: #343752;
+  --color-muted: #8a8fb4;
+  --color-subtle: #4a4e6e;
+  --color-panel: #f4f5fb;
+  --color-accent: #5d64a8;
+  --color-track: #b4b9dc;
+  --color-hairline: #bec2de;
+  --color-led: #5ff0e2;
+  --color-tool: #232428;
+  --color-tool-deep: #18191c;
+  --color-tool-line: #34353b;
+  --color-tool-ink: #ecedf2;
+  --color-tool-muted: #8d8f9c;
+  --color-ember: #e3872e;
+
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --font-display: "Unbounded", ui-sans-serif, sans-serif;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #aeb3d2;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+:where(button, input, [role="slider"]):focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* Vertical faders (EQ + reverb). Native range inputs keep keyboard + screen-reader support. */
+.fader {
+  -webkit-appearance: none;
+  appearance: none;
+  writing-mode: vertical-lr;
+  direction: rtl;
+  margin: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.fader::-webkit-slider-runnable-track {
+  width: 8px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #0e0b0a, #2a2220 60%, #0e0b0a);
+}
+.fader::-moz-range-track {
+  width: 8px;
+  border-radius: 4px;
+  background: #1a1412;
+}
+.fader::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 42px;
+  height: 34px;
+  margin-left: -17px;
+  border: 0;
+  border-radius: 7px;
+  background: linear-gradient(180deg, #5a4237, #2a1c17 45%, #e6c27a 45%, #e6c27a 53%, #3e2c24 53%, #1e1411);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+.fader::-moz-range-thumb {
+  width: 42px;
+  height: 34px;
+  border: 0;
+  border-radius: 7px;
+  background: linear-gradient(180deg, #5a4237, #2a1c17 45%, #e6c27a 45%, #e6c27a 53%, #3e2c24 53%, #1e1411);
+}
+
+.fader--rack::-webkit-slider-runnable-track {
+  width: 6px;
+  border-radius: 3px;
+  background: #1b1c1f;
+}
+.fader--rack::-moz-range-track {
+  width: 6px;
+  background: #1b1c1f;
+}
+.fader--rack::-webkit-slider-thumb {
+  width: 36px;
+  height: 26px;
+  margin-left: -15px;
+  border-radius: 13px;
+  background: linear-gradient(180deg, #fff, #d6d7da 45%, #9fa1a6 50%, #e9eaec);
+}
+.fader--rack::-moz-range-thumb {
+  width: 36px;
+  height: 26px;
+  border-radius: 13px;
+  background: linear-gradient(180deg, #fff, #d6d7da 45%, #9fa1a6 50%, #e9eaec);
+}
+.fader--hot::-webkit-slider-thumb {
+  background: linear-gradient(180deg, #ffb867, #e3872e 45%, #b4621a 50%, #f0a04b);
+}
+.fader--hot::-moz-range-thumb {
+  background: linear-gradient(180deg, #ffb867, #e3872e 45%, #b4621a 50%, #f0a04b);
+}
